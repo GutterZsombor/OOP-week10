@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         // Initialize UI components
         initializeViews();
 
-        // Load and display menu data
-        loadMenuData();
+        // Load and display movie data
+        loadMovieData();
     }
 
     /**
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Load menu data from JSON file
      */
-    private void loadMenuData() {
+    private void loadMovieData() {
         try {
             // Load menu data from JSON file
             movieData = JSONUtility.loadMovieData(this, R.raw.movies);

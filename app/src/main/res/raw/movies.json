@@ -69,19 +69,14 @@
     "poster": "gladiator_poster"
   },
   {
-    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "title": "The Lord of the Rings",
     "year": 2001,
     "genre": "Fantasy",
     "poster": "lotr_fellowship_poster"
   },
+
   {
-    "title": "The Lord of the Rings: The Return of the King",
-    "year": 2003,
-    "genre": "Fantasy",
-    "poster": "lotr_return_poster"
-  },
-  {
-    "title": "Star Wars: A New Hope",
+    "title": "Star Wars",
     "year": 1977,
     "genre": "Sci-Fi",
     "poster": "star_wars_new_hope_poster"

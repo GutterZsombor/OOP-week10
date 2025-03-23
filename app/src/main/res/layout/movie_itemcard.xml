@@ -20,6 +20,7 @@ app:cardElevation="4dp">
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:scaleType="centerCrop"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
@@ -29,11 +30,12 @@ app:cardElevation="4dp">
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
         android:text="Title"
-        app:layout_constraintEnd_toStartOf="@+id/textViewYear"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toEndOf="@+id/imageViewPoster"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:textAllCaps="false" />
 
     <TextView
         android:id="@+id/textViewYearText"

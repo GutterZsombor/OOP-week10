@@ -3,6 +3,7 @@ package online.mrgutter.week10.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import android.support.v7.widget.RecyclerView;
@@ -34,6 +35,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         holder.yearTextView.setText(String.valueOf(movie.getYear()));}
         else {holder.yearTextView.setText(String.valueOf("N/A"));}
         holder.genreTextView.setText(movie.getGener());
+
     }
 
     @Override
@@ -50,6 +52,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     // ViewHolder Class
     public static class MovieViewHolder extends RecyclerView.ViewHolder {
         TextView titleTextView, yearTextView, genreTextView;
+
 
         public MovieViewHolder(View itemView) {
             super(itemView);

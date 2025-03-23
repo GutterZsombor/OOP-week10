@@ -39,13 +39,14 @@ public class JSONUtility {
 
             // Skip empty objects
             if (obj.length() == 0) {
-                System.out.println("skip");
+                //System.out.println("skip");
                 continue;
 
             }
 
             else {
                 String title = obj.optString("title", "Unknown");
+
                 // Get titleif missing or null set it to Unknoww
                 if(title==null||title==""||title=="null") {
                     title = "Unknown";
@@ -92,7 +93,7 @@ public class JSONUtility {
 
             Log.w(TAG, "Error reading JSON file");
             System.out.println( e.getMessage());
-                 } catch (JSONException e) {
+        } catch (JSONException e) {
 
                 Log.w(TAG, "Error parsing JSON");
                 System.out.println( e.getMessage());
