@@ -9,27 +9,7 @@ import android.widget.TextView;
 
 import online.mrgutter.week10.R;
 
-//public class MovieViewHolder {
-    /**
-     * ViewHolder for category header items
 
-    public static class CategoryViewHolder extends RecyclerView.ViewHolder {
-        private final TextView categoryNameTextView;
-
-        public CategoryViewHolder(@NonNull View itemView) {
-            super(itemView);
-            categoryNameTextView = itemView.findViewById(R.id.textViewCategoryName);
-        }
-
-        public void bind(String categoryName) {
-            categoryNameTextView.setText(categoryName);
-        }
-    }
-     */
-
-    /**
-     * ViewHolder for menu item entries
-     */
     public  class MovieViewHolder extends RecyclerView.ViewHolder {
         private final ImageView itemImageView;
         private final TextView itemTitleTextView;

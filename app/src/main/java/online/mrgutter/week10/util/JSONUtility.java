@@ -38,35 +38,54 @@ public class JSONUtility {
             JSONObject obj = jsonArray.getJSONObject(j);
 
             // Skip empty objects
-            if (obj.length() == 0) continue;
+            if (obj.length() == 0) {
+                System.out.println("skip");
+                continue;
 
-            // Get titleif missing or null set it to Unknoww
-            String title = obj.optString("title", "Unknown");
-
-            // Get yeardeal invalid values
-            int year = 0;
-            if (obj.has("year")) {
-                try {
-                    year = Integer.parseInt(obj.get("year").toString()); // Convert to integer if it is given as string
-                    if (year < 1800) { // Ignore invalid years
-                        year = 0;
-                    }
-                } catch (Exception e) {
-                    year = 0; // Handle non-integer years
-                    Log.w(TAG, "Errorwith yera");
-                    System.out.println( e.getMessage());
-                }
             }
 
+            else {
+                String title = obj.optString("title", "Unknown");
+                // Get titleif missing or null set it to Unknoww
+                if(title==null||title==""||title=="null") {
+                    title = "Unknown";
+                }
 
-            String genre = obj.optString("genre", "Unknown");
+                // Get yeardeal invalid values
+                int year = 0;
+                if (obj.has("year")) {
+                    try {
+                        String yearstring=obj.get("year").toString();
+
+                        //check for decimal
+                        if (yearstring.contains(".")){
+                            String[] arr =yearstring.split("\\.");
+                            System.out.println(arr[0]);
+                            yearstring=arr[0];
+                        }
+
+                        year = Integer.parseInt(yearstring); // Convert to integer if it is given as string
+                        if (year < 1800) { // Ignore invalid years
+                            year = 0;
+                        }
+                    } catch (Exception e) {
+                        year = 0; // Handle non-integer years
+                        Log.w(TAG, "Errorwith yera");
+                        System.out.println(e.getMessage());
+                    }
+                }
 
 
-            String poster = obj.optString("poster", "placeholder_image");
+                String genre = obj.optString("genre", "Unknown");
 
-            // Add to movie list if title is valid
-            if (!title.equals("Unknown") && year > 0) {
+
+                String poster = obj.optString("poster", "placeholder_image");
+
+
+                // Add to movie list if title is valid
+
                 movielist.add(new Movie(title, year, genre, poster));
+
             }
         }
             } catch (IOException e) {

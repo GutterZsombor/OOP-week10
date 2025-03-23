@@ -30,7 +30,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     public void onBindViewHolder(MovieViewHolder holder, int position) {
         Movie movie = movies.get(position);
         holder.titleTextView.setText(movie.getTitle());
-        holder.yearTextView.setText(String.valueOf(movie.getYear()));
+        if(movie.getYear()!=0){
+        holder.yearTextView.setText(String.valueOf(movie.getYear()));}
+        else {holder.yearTextView.setText(String.valueOf("N/A"));}
         holder.genreTextView.setText(movie.getGener());
     }
 

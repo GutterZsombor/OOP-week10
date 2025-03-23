@@ -5,8 +5,8 @@ import android.content.res.Resources;
 import android.util.Log;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+//import androidx.annotation.NonNull;
+//import androidx.annotation.Nullable;
 
 import org.json.JSONException;
 
@@ -23,7 +23,7 @@ public class ErrorHandler {
      * @param fallbackMessage Default message if error type isn't specifically handled
      * @return true if the error was handled, false otherwise
      */
-    public static boolean handleError(@NonNull Context context, @Nullable Throwable throwable, String fallbackMessage) {
+    public static boolean handleError( Context context,  Throwable throwable, String fallbackMessage) {
         if (throwable == null) {
             showError(context, fallbackMessage);
             return true;
@@ -65,7 +65,7 @@ public class ErrorHandler {
      * @param context The context to show the toast
      * @param message The error message to display
      */
-    public static void showError(@NonNull Context context, String message) {
+    public static void showError( Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
     }
 
@@ -75,7 +75,7 @@ public class ErrorHandler {
      * @param message The message to log
      * @param throwable The exception that occurred (optional)
      */
-    public static void logError(String tag, String message, @Nullable Throwable throwable) {
+    public static void logError(String tag, String message,  Throwable throwable) {
         if (throwable != null) {
             Log.e(tag, message, throwable);
         } else {
