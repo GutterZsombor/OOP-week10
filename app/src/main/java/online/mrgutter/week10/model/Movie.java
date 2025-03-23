@@ -87,4 +87,6 @@ public class Movie {
     public void setImageFileName(String imageFileName) {
         this.imageFileName = imageFileName;
     }
+
+
 }

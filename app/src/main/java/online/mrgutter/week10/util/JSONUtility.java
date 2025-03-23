@@ -14,7 +14,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import online.mrgutter.week10final.model.Movie;
+import online.mrgutter.week10.model.Movie;
 
 public class JSONUtility {
 
